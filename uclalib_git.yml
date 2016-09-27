@@ -1,0 +1,9 @@
+---
+
+- name: uclalib_git.yml
+  become: yes
+  become_method: sudo
+  hosts: test
+
+  roles:
+    - { role: uclalib_role_git, git_version: 1.8.5.5 }
