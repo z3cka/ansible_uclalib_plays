@@ -1,0 +1,45 @@
+---
+
+# Public vars for the DSpace playbook go here
+
+dspace_git_repo: http://github.com/UCLALibrary/DSpace.git
+dspace_env_build_name: uclalib_dspilot
+
+dspace_name: UCLA Library DSpace Pilot
+dspace_hostname: dspilot.library.ucla.edu
+dspace_baseUrl: https://dspilot.library.ucla.edu
+dspace_ui: jspui
+dspace_solr_server: http://localhost:8081/solr
+dspace_default_language: en_US
+
+dspace_mail_from_address: hpottinger@library.ucla.edu
+dspace_mail_feedback_recipient: hpottinger@library.ucla.edu
+dspace_mail_admin: hpottinger@library.ucla.edu
+dspace_mail_alert_recipient: hpottinger@library.ucla.edu
+dspace_mail_registration_notify: hpottinger@library.ucla.edu
+
+dspace_loglevel_other: INFO
+dspace_loglevel_dspace: INFO
+tomcat_applications:
+  - app_name: dspace
+    shut_port: 8006
+    ajp_conn_port: 8010
+    conn_port: 8081
+    rproxy_path: dspace
+
+dspace_shut_port: 8006
+dspace_ajp_conn_port: 8010
+dspace_conn_port: 8081
+
+
+dspace_apps: 
+    - probe
+    - jspui
+    - swordv2
+    - solr
+    - rest
+    - oai
+
+public_keys_for_dspace_login: |
+  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCkq8Aa3Ms01Pa5kxorfHzZl/FkLCAvVbCnC3TSQGpjVqhhhsXivJs7DtO+ibgs8kjbW8s/dLtbT68CUdhyJh9nMQLQVceahC+MMQ1TwqjO4acmjBcqiecnyF7vMjAXXDp7hfwF05hTQoM7xCWjBpdbVpLWKnyqhv2ZQbtjGm00JRxaju1QZniPlNIsj7jCBv7en7PcU+pfx83RA2NkQbZKnJ3yfFAVGLUzeyevIIIpfHSqJTxZMff34kNEScSN4MO0JRQP0b4qcIoQoGBikAA47YQMQwJzcU2fg5/exZczzG5dbl+s1Ph5aGixGUhSXvOjjrxD43i3uq2C3z6+OJC1 hpottinger@Hardys-MacBook-Air.local
+  ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAsg6VC5p+f7vnzyUmcwiZOBxHhp19YBxpXX4RhbS48Zc7fm6Booq6A63XmCABc/aHQ/AsbbLM8hLq6pzns8YmuOhoxLXGUOaXz0Jj5HvSEwtAuZQAdQ6+vdYD9lahkap1Xz/lA9sFTMP7ZpWVaSApp9aFyBHKFMcrZ2AyOriTmUeKBfFNeQmFVsEMkQTtZytN8hYs6oz7BzIoFswNcpEXk84bFId7wStGgsKWJd7N5hSG8qv8X8E1TeN1z94VJBm1D6XFl1Re27bdOvMDTX1Sksq/d+x9myriEuxmsiwETf0yJ2f9Eld3aigmpwWtBnySr+7iCChY33xyceQ2enU4RQ== edson@lit265v
