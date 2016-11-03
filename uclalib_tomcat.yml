@@ -14,6 +14,7 @@
         shut_port: 8007
         conn_port: 8082
         rproxy_path: path2
+    use_lvm: yes
 
   roles:
     - { role: uclalib_role_java }
