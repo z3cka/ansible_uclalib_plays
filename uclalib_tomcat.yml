@@ -2,7 +2,7 @@
 - name: uclalib_tomcat.yml
   become: yes
   become_method: sudo
-  hosts: test
+  hosts: tomcat
   # Define the intended tomcat applicaitons in the vars section below
   vars:
     tomcat_applications:
