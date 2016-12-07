@@ -3,7 +3,7 @@
 - name: uclalib_webservicewardeploy.yml
   become: yes
   become_method: sudo
-  hosts: test
+  hosts: tomcat
 
   roles:
     - { role: uclalib_role_webservices }
