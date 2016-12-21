@@ -2,7 +2,18 @@
 
 # Public vars for the DSpace playbook go here
 
+tomcat_major_version: 8
+
+# Define the version of Apache Tomcat to download
+# Will obtain from this URL:
+# http://archive.apache.org/dist/tomcat/tomcat-{{ tomcat_major_version }}/v{{ tomcat_version }}/bin/apache-tomcat-{{ tomcat_version }}.zip
+tomcat_version: 8.5.9
+
+
+
 dspace_git_repo: http://github.com/UCLALibrary/DSpace.git
+dspace_git_branch: ucla-dr-6_x
+rhr_git_repo: http://github.com/UCLALibrary/Remote-Handle-Resolver.git
 dspace_env_build_name: uclalib_dspilot
 
 dspace_name: UCLA Library DSpace Pilot
