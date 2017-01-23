@@ -19,6 +19,7 @@ dspace_env_build_name: uclalib_dspilot
 dspace_name: UCLA Library DSpace Pilot
 dspace_hostname: dspilot.library.ucla.edu
 dspace_baseUrl: https://dspilot.library.ucla.edu
+dspace_localUrl: http://localhost:8081
 dspace_ui: jspui
 dspace_solr_server: http://localhost:8081/solr
 dspace_default_language: en_US
@@ -50,6 +51,11 @@ dspace_apps:
     - solr
     - rest
     - oai
+
+# DSpace Handle endpoints for use with the multi-remote handle resolver, multiple entries allowed, in the case of multiple Tomcat instances on the same server, you'll probably
+# want to use the port number for each instance, eg: 8081, 8082, etc.
+endpoints:
+    - http://127.0.0.1:8081/jspui/json/hdlresolver
 
 public_keys_for_dspace_login: |
   ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCkq8Aa3Ms01Pa5kxorfHzZl/FkLCAvVbCnC3TSQGpjVqhhhsXivJs7DtO+ibgs8kjbW8s/dLtbT68CUdhyJh9nMQLQVceahC+MMQ1TwqjO4acmjBcqiecnyF7vMjAXXDp7hfwF05hTQoM7xCWjBpdbVpLWKnyqhv2ZQbtjGm00JRxaju1QZniPlNIsj7jCBv7en7PcU+pfx83RA2NkQbZKnJ3yfFAVGLUzeyevIIIpfHSqJTxZMff34kNEScSN4MO0JRQP0b4qcIoQoGBikAA47YQMQwJzcU2fg5/exZczzG5dbl+s1Ph5aGixGUhSXvOjjrxD43i3uq2C3z6+OJC1 hpottinger@Hardys-MacBook-Air.local
