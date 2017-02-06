@@ -17,4 +17,5 @@ script:
   # We'll add some commands to test the role here.
   - echo "localhost" > inventory
   - git clone https://github.com/UCLALibrary/postgresql.git ./uclalib_role_postgres
+  - git clone https://github.com/UCLALibrary/ansible_uclalib_role_iptables.git ./uclalib_role_iptables
   - ansible-playbook -i inventory uclalib_postgres.yml -e postgres-check.yml --syntax-check
