@@ -17,6 +17,7 @@ rhr_git_repo: http://github.com/UCLALibrary/Remote-Handle-Resolver.git
 dspace_env_build_name: uclalib_dspilot
 
 dspace_name: UCLA Library DSpace Pilot
+dspace_assetstrore_dir: /data/assetstore
 dspace_hostname: dspilot.library.ucla.edu
 dspace_baseUrl: https://dspilot.library.ucla.edu
 dspace_localUrl: http://localhost:8081
