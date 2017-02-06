@@ -13,4 +13,4 @@ install:
 
 script:
   # We'll add some commands to test the role here.
-ansible-playbook -i localhost.ini uclalib_dspace.yml --syntax-check
+  ansible-playbook -i localhost.ini uclalib_dspace.yml --syntax-check
