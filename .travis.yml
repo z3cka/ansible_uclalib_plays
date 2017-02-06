@@ -15,5 +15,5 @@ install:
 
 script:
   # We'll add some commands to test the role here.
-  git clone git@github.com:UCLALibrary/postgresql.git /tmp/uclalib_role_postgres
-  ansible-playbook uclalib_postgres.yml --syntax-check
+  - git clone git@github.com:UCLALibrary/postgresql.git /tmp/uclalib_role_postgres
+  - ansible-playbook uclalib_postgres.yml -e postgres-check.yml --syntax-check
