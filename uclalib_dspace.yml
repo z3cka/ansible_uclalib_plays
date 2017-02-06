@@ -2,7 +2,7 @@
 - name: uclalib_dspace.yml
   become: yes
   become_method: sudo
-  hosts: test
+  hosts: all
 
   vars_files:
     - vars/dspace_vars_private.yml
@@ -63,10 +63,9 @@
     - { role: uclalib_role_java_maven }
     - { role: uclalib_role_java_ant }
     - { role: uclalib_role_git }
-    - { role: anxs_role_postgresql }
+    - { role: anxs_role_postgresql, when: ansible_virtualization_type != "VMware" }
     - { role: uclalib_role_apache }
     - { role: uclalib_role_tomcat }
     - { role: uclalib_role_dspace }
     - { role: uclalib_role_handle }
-
 
