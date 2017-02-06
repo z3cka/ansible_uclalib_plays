@@ -8,6 +8,10 @@
     - [ "vars/travis-builds/{{ travischeck }}", "vars/dspace_vars_private.yml" ]
 
   vars:
+    iptables_alt_allowed_input_rules:
+      - src_ip: 164.67.153.0/24
+        protocol: tcp
+        dest_port: 5432
     postgresql_version: 9.5
     postgresql_encoding: 'UTF-8'
     postgresql_locale: 'en_US.UTF-8'
@@ -70,3 +74,4 @@
 
   roles:
     - { role: uclalib_role_postgres }
+    - { role: uclalib_role_iptables }
