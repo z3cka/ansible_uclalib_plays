@@ -1,0 +1,35 @@
+postgres_build:
+  test:
+    testuser1:
+      encoding: "UTF-*"
+      lc_collate: "en_US.UTF-8"
+      lc_ctype: "en_US.UTF-8"
+      dbname: testdb1
+      users:
+        username: "testuser1"
+        password: "testpassword123"
+    testuser2:
+      encoding: "UTF-*"
+      lc_collate: "en_US.UTF-8"
+      lc_ctype: "en_US.UTF-8"
+      dbname: testdb2
+      users:
+        username: "testuser2"
+        password: "testpassword123"
+  prod:
+    produser1:
+      encoding: "UTF-*"
+      lc_collate: "en_US.UTF-8"
+      lc_ctype: "en_US.UTF-8"
+      dbname: proddb1
+      users:
+        username: "produser1"
+        password: "prodpassword123"
+    produser2:
+      encoding: "UTF-*"
+      lc_collate: "en_US.UTF-8"
+      lc_ctype: "en_US.UTF-8"
+      dbname: proddb2
+      users:
+        username: "produser2"
+        password: "prodpassword123"
