@@ -5,7 +5,7 @@
   hosts: all
 
   vars_files:
-    - vars/dspace_vars_private.yml
+    - [ "vars/travis-builds/{{ travischeck }}", "vars/dspace_vars_private.yml" ]
 
   vars:
     postgresql_version: 9.5
