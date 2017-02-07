@@ -29,73 +29,73 @@
 
     # create a postgresql user for dspace
     postgresql_users:
-      - name: "{{ postgres_build['test']['uclalibdataden']['users']['username'] }}"
-        pass: "{{ postgres_build['test']['uclalibdataden']['users']['password'] }}"
+      - name: "{{ postgres_build['test']['dataden']['users']['username'] }}"
+        pass: "{{ postgres_build['test']['dataden']['users']['password'] }}"
         encrypted: yes
-      - name: "{{ postgres_build['test']['uclalibvsim']['users']['username'] }}"
-        pass: "{{ postgres_build['test']['uclalibvsim']['users']['password'] }}"
+      - name: "{{ postgres_build['test']['vsim']['users']['username'] }}"
+        pass: "{{ postgres_build['test']['vsim']['users']['password'] }}"
         encrypted: yes
-      - name: "{{ postgres_build['prod']['uclalibdataden']['users']['username'] }}"
-        pass: "{{ postgres_build['prod']['uclalibdataden']['users']['password'] }}"
+      - name: "{{ postgres_build['prod']['dataden']['users']['username'] }}"
+        pass: "{{ postgres_build['prod']['dataden']['users']['password'] }}"
         encrypted: yes
-      - name: "{{ postgres_build['prod']['uclalibvsim']['users']['username'] }}"
-        pass: "{{ postgres_build['prod']['uclalibvsim']['users']['password'] }}"
+      - name: "{{ postgres_build['prod']['vsim']['users']['username'] }}"
+        pass: "{{ postgres_build['prod']['vsim']['users']['password'] }}"
         encrypted: yes
 
     # create a database for dspace
     postgresql_databases:
-      - name: "{{ postgres_build['test']['uclalibdataden']['dbname'] }}"
-        owner: "{{ postgres_build['test']['uclalibdataden']['users']['username'] }}" 
+      - name: "{{ postgres_build['test']['dataden']['dbname'] }}"
+        owner: "{{ postgres_build['test']['dataden']['users']['username'] }}" 
         encoding: 'UTF-8'
         lc_collate: 'en_US.UTF-8'
         lc_ctype: 'en_US.UTF-8'
-      - name: "{{ postgres_build['test']['uclalibvsim']['dbname'] }}"
-        owner: "{{ postgres_build['test']['uclalibvsim']['users']['username'] }}" 
+      - name: "{{ postgres_build['test']['vsim']['dbname'] }}"
+        owner: "{{ postgres_build['test']['vsim']['users']['username'] }}" 
         encoding: 'UTF-8'
         lc_collate: 'en_US.UTF-8'
         lc_ctype: 'en_US.UTF-8'
-      - name: "{{ postgres_build['prod']['uclalibdataden']['dbname'] }}"
-        owner: "{{ postgres_build['prod']['uclalibdataden']['users']['username'] }}" 
+      - name: "{{ postgres_build['prod']['dataden']['dbname'] }}"
+        owner: "{{ postgres_build['prod']['dataden']['users']['username'] }}" 
         encoding: 'UTF-8'
         lc_collate: 'en_US.UTF-8'
         lc_ctype: 'en_US.UTF-8'
-      - name: "{{ postgres_build['prod']['uclalibvsim']['dbname'] }}"
-        owner: "{{ postgres_build['prod']['uclalibvsim']['users']['username'] }}" 
+      - name: "{{ postgres_build['prod']['vsim']['dbname'] }}"
+        owner: "{{ postgres_build['prod']['vsim']['users']['username'] }}" 
         encoding: 'UTF-8'
         lc_collate: 'en_US.UTF-8'
         lc_ctype: 'en_US.UTF-8'
 
     # OPTIONAL: you can specify database extensions here (like pgcrypto, which is required for DSapce 6)
     postgresql_database_extensions:
-      - db: "{{ postgres_build['test']['uclalibdataden']['dbname'] }}"
+      - db: "{{ postgres_build['test']['dataden']['dbname'] }}"
         extensions:
           - pgcrypto
-      - db: "{{ postgres_build['test']['uclalibvsim']['dbname'] }}"
+      - db: "{{ postgres_build['test']['vsim']['dbname'] }}"
         extensions:
           - pgcrypto
-      - db: "{{ postgres_build['prod']['uclalibdataden']['dbname'] }}"
+      - db: "{{ postgres_build['prod']['dataden']['dbname'] }}"
         extensions:
           - pgcrypto
-      - db: "{{ postgres_build['prod']['uclalibvsim']['dbname'] }}"
+      - db: "{{ postgres_build['prod']['vsim']['dbname'] }}"
         extensions:
           - pgcrypto
 
     # database privileges for the dspace user
     postgresql_user_privileges:
-      - name: "{{ postgres_build['test']['uclalibdataden']['users']['username'] }}"
-        db: "{{ postgres_build['test']['uclalibdataden']['dbname'] }}"
+      - name: "{{ postgres_build['test']['dataden']['users']['username'] }}"
+        db: "{{ postgres_build['test']['dataden']['dbname'] }}"
         priv: "ALL"
         role_attr_flags: "CREATEDB"
-      - name: "{{ postgres_build['test']['uclalibvsim']['users']['username'] }}"
-        db: "{{ postgres_build['test']['uclalibvsim']['dbname'] }}"
+      - name: "{{ postgres_build['test']['vsim']['users']['username'] }}"
+        db: "{{ postgres_build['test']['vsim']['dbname'] }}"
         priv: "ALL"
         role_attr_flags: "CREATEDB"
-      - name: "{{ postgres_build['prod']['uclalibdataden']['users']['username'] }}"
-        db: "{{ postgres_build['prod']['uclalibdataden']['dbname'] }}"
+      - name: "{{ postgres_build['prod']['dataden']['users']['username'] }}"
+        db: "{{ postgres_build['prod']['dataden']['dbname'] }}"
         priv: "ALL"
         role_attr_flags: "CREATEDB"
-      - name: "{{ postgres_build['prod']['uclalibvsim']['users']['username'] }}"
-        db: "{{ postgres_build['prod']['uclalibvsim']['dbname'] }}"
+      - name: "{{ postgres_build['prod']['vsim']['users']['username'] }}"
+        db: "{{ postgres_build['prod']['vsim']['dbname'] }}"
         priv: "ALL"
         role_attr_flags: "CREATEDB"
 
