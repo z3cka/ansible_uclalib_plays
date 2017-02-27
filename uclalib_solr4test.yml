@@ -2,7 +2,7 @@
 - name: uclalib_solr4test.yml
   become: yes
   become_method: sudo
-  hosts: solr_master
+  hosts: all
   # Define the intended solr applicaitons in the vars section below
   # Optionally define the solr instance type and master host fqdn
   vars:
@@ -28,6 +28,22 @@
         type: 'default'
       - ident: 'jiiify'
         type: 'default'
+      - ident: 'vsim_authority'
+        type: 'vsim_authority'
+      - ident: 'vsim_oai'
+        type: 'vsim_oai'
+      - ident: 'vsim_search'
+        type: 'vsim_search'
+      - ident: 'vsim_statistics'
+        type: 'vsim_statistics'
+      - ident: 'dd_authority'
+        type: 'dd_authority'
+      - ident: 'dd_oai'
+        type: 'dd_oai'
+      - ident: 'dd_search'
+        type: 'dd_search'
+      - ident: 'dd_statistics'
+        type: 'dd_statistics'
 # Use 1 for master and 2 for slave
     solr_instance_type: 1
 # Uncomment variable below when solr_instance_type is 2 enter correct FQDN for solr master
