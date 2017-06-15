@@ -1,0 +1,11 @@
+---
+- name: uclalib_sandbox_prep.yml
+  become: yes
+  become_method: sudo
+  
+  hosts: sandboxes # TODO: make var?
+  
+  remote_user: cgrzecka # TODO: make var? or maybe just leave out
+  
+  roles:
+    - { role: uclalib_role_user_ansible }
