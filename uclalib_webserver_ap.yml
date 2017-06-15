@@ -1,0 +1,12 @@
+---
+- name: uclalib_webserver.yml
+  become: yes
+#   become_method: sudo
+  
+  hosts: webservers # TODO: make var?
+  
+  remote_user: ansible
+  
+  roles:
+    - { role: uclalib_role_apache }
+    - { role: uclalib_role_php }
