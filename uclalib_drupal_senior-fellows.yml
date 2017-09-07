@@ -1,0 +1,15 @@
+---
+- name: uclalib_drupal_senior-fellows.yml
+  become: yes
+  # become_method: sudo
+
+  hosts: drupal_webhead
+
+  remote_user: ansible
+
+  roles:
+    ## TODO: role some of D8'd requirements into php's own role, maybe
+    - { role: uclalib_role_drupal }         # drupal php requirements
+    - { role: ansible-role-composer }       # installs composer
+    - { role: ansible-role-drush }          # installs drush
+    - { role: uclalib_role_senior-fellows } # project level configuration
